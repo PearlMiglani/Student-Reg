@@ -8,4 +8,4 @@ Key features-
 
 The unique id generated refers to the details entered by student and previous database records to add a unique id in the form of a string. Fetching database for the entry of each record is not an optimized method. This code uses class variables instead that keep track of the last record. However, in case the server is restarted, the values of the variables are lost and in this case, data is fetched from the database.
 
-3. CRUD operation works effieciently even multiple clients are linked to the server.
+3. CRUD operation works efficiently even multiple clients are linked to the server.
