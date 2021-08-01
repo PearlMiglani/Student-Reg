@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="results" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    emp id<input type="text" name="id" /><br>
+    emp name<input type="text" name="name" value="{{obj.empname}}"/><br>
+    emp address<input type="text" name="add" value="{{obj.empadress}}"/><br>
+    emp age<input type="int" name="age" value="{{obj.empAge}}"/><br>
+    Stream <br>
+    <label for="BT">
+        BTech
+    </label>
+    <input type="radio" name="stream" value="BT">
+    <label for="IM">
+        IMBA
+    </label>
+    <input type="radio" name="stream" value="IM"><br>
+    Category<br>
+    <label for="G">
+        General
+    </label>
+    <input type="radio" name="category" value="G">
+    <label for="O">
+        Other
+    </label>
+    <input type="radio" name="category" value="O"><br>
+    
+    Joining year<input type="number" name="year"/>
+    Date of birth(yyyy-mm-dd)<input type="date" name="date" value="{{obj.date}}"/><br>
+    Salary <input type="number" step="0.01" name="salary" value="{{obj.salary}}"/><br>
+    Add image<input type="file" name="file"/>
+    <input type="submit" value="insert" name='t1'/>
+    <input type="submit" value="select" name='t1'/>
+    <input type="submit" value="delete" name='t1'/>
+    <input type="submit" value="update" name='t1'/>
+    
+</form>
+    
+<hr>
+{{msg}}
+{{msg1}}
+{{num1}}
+{{no}}
+<hr>
+{{obj.primary_id}}<br>
+{{obj.empname}}<br>
+{{obj.empAge}}<br>
+{{obj.empadress}}<br>
+{{obj.gender}}<br>
+{{obj.pancard}}<br>
+{{obj.date}}<br>
+{{obj.salary}}<br>
+
+<img src="{{obj.img.url}}" width=100px><br>
+{{obj.img.url}}<br>
+</body>
+</html>
