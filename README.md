@@ -1,5 +1,5 @@
 # Student-Reg
-##Key features-
+Key features-
 
 1. Capable of linking multiple clients to the server.
 2. Optimized fetching from database by using class varaibles instead.
